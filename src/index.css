@@ -1,0 +1,207 @@
+:root{
+  --blackBorder: 1px solid black;
+  --redBorder: 1px solid red;
+  --blueBorder: 1px solid blue;
+  --greenBorder: 1px solid green;
+  --P2rem: 0.2rem 0.2rem;
+  --P4rem: 0.4rem 0.4rem;
+  --cardBgColor: white;
+  --incomeColor: green;
+  --expenseColor: red;
+  --buttonColor: blueviolet;
+  --bodyBgColor: whiteSmoke;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bodyBgColor);
+}
+
+#root{
+  border: 1px solid black;
+  padding: var(--P2rem);
+  width: 34%;
+  margin: 0.1rem auto;
+  margin-top: 2.8rem;
+  box-shadow: 2px 3px 10px ;
+}
+
+/* Header section starts here */
+
+.header{
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+/* Header section ends here */
+
+/* Balance section starts here */
+.balanceContainer{
+  padding: var(--P2rem);
+  margin-top: 1.2rem;
+}
+
+.balanceContainer h2{
+  font-weight: normal;
+}
+
+.balanceContainer h2,h1{
+  margin: var(--P4rem);
+  font-size: 1.6rem;
+}
+
+/* Balance section ends here */
+
+/* Income and expense section starts here */
+.incomeExpenseContainer{
+  display: flex;
+  gap: 0.2rem;
+  padding: var(--P2rem);
+  margin: 0.1rem auto;
+}
+
+.incomeContainer, .expenseContainer{
+  padding: var(--P2rem);
+  width: 50%;
+  background-color: var(--cardBgColor);
+  box-shadow: 2px 3px 2px silver;
+}
+
+.incomeContainer p, .expenseContainer p{
+  margin: var(--P4rem);
+  text-align: center;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.incomeValue{
+  color: var(--incomeColor);
+}
+
+.expenseValue{
+  color: var(--expenseColor);
+}
+
+/* Income and expense section ends here */
+
+/* Transaction list section starts here */
+.transactionListContainer{
+  padding: var(--P2rem);
+}
+
+.subHeader{
+  font-size: 1.2rem;
+  margin: 0.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #ccc;
+}
+
+.list{
+  list-style: none;
+  padding: var(--P2rem);
+}
+
+#listItem{
+ position: relative;
+ border: 1px solid #ccc;
+ box-shadow: 1px 1px 1px;
+ display: flex;
+ align-items: center;
+ padding: var(--P4rem);
+ margin: 0.2rem 0rem;
+ background-color: var(--cardBgColor);
+}
+
+.transactionValue{
+  position: absolute;
+  right: 3%;
+}
+
+.deleteBtn{
+  position: absolute;
+  right: 100%;
+  background-color: red;
+  color: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: none;
+  opacity: 1;
+}
+
+.deleteBtn:hover{
+  opacity: 0.8;
+}
+
+.list li:hover .deleteBtn{
+  display: block;
+}
+
+.plus{
+  border-right: 6px solid var(--incomeColor) !important;
+}
+
+.minus{
+  border-right: 6px solid var(--expenseColor) !important;
+}
+
+/* Transaction list section ends here */
+
+/* Add transaction section starts here */
+.transactionForm{
+  padding: var(--P2rem);
+  margin: 0.1rem auto;
+}
+
+.labelHeader{
+  padding: var(--P2rem);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+input[type="text"],input[type="number"]{
+  width: 98%;
+  padding: 0.4rem 0.2rem;
+  margin: 0.2rem 0rem;
+}
+
+.addTransactionBtn{
+  display: flex;
+  justify-content: center;
+  width: 98%;
+  padding: var(--P4rem);
+  margin: 0.2rem auto;
+  cursor: pointer;
+  background-color: var(--buttonColor);
+  color: white;
+  border: 1px solid #ccc;
+  opacity: 1;
+}
+
+.addTransactionBtn:hover{
+  opacity: 0.8;
+}
+
+/* Add transaction section ends here */
+
+/* Media queries starts from here */
+@media(max-width: 1050px){
+  #root{
+    width: 44%;
+  }
+}
+
+@media(max-width: 740px){
+  #root{
+    width: 64%;
+  }
+}
+
+@media(max-width: 550px){
+  #root{
+    width: 80%;
+  }
+}
+
+/* Media queries ends from here */
